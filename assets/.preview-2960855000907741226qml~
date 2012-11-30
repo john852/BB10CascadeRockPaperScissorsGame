@@ -1,0 +1,86 @@
+// Default empty project template
+import bb.cascades 1.0
+
+// creates one page with a label
+Page {
+    
+    id : titlePage;
+    
+    Container {
+        id : mainContainer;
+        
+        background: backgroundImage.imagePaint
+        attachedObjects: [
+            ImagePaintDefinition {
+                id: backgroundImage
+                repeatPattern: RepeatPattern.Fill
+                imageSource: "asset:///images/background/greenB2.amd"
+            }
+        ]
+        
+        
+        // List for options
+        ListView {
+            id: optionList
+            objectName: "optionList"
+            
+            layout: GridListLayout {
+                columnCount: 1
+                headerMode: ListHeaderMode.Standard
+//                cellAspectRatio: 1.4
+//                spacingAfterHeader: 40
+//                verticalCellSpacing: 0
+            }
+//            
+//            // This data model will be replaced by a JSON model when the application starts,
+//            // an XML model can be used to prototype the UI and for smaller static lists.
+//            dataModel: XmlDataModel {
+//                source: "models/stamps.xml"
+//            }
+            
+            listItemComponents: [
+//                ListItemComponent {
+//                    type: "header"
+//                    
+//                    Header {
+//                        title: {
+//                            if (ListItemData.title) {
+//                                // If the data is loaded from XML, a title property is used for the title.
+//                                ListItemData.title
+//                            } else {
+//                                // If it is loaded from JSON and set in a GroupDataModel, the header info is set in ListItemData.
+//                                ListItemData
+//                            }
+//                        }
+//                    }
+//                },
+//                // The stamp Item
+//                ListItemComponent {
+//                    type: "item"
+//                    StampItem {
+//                    }
+//                }
+            ] // listItemComponents
+            
+            onTriggered: {
+//                // When an item is selected we push the recipe Page in the chosenItem file attribute.
+//                var chosenItem = dataModel.data(indexPath);
+//                
+//                // The _contentView property can be resolved in by the ContentPage since it will
+//                // share the same context as the main file.
+//                _contentView = chosenItem;
+//                
+//                // Create the content page and push it on top to drill down to it.
+//                var page = contentPageDefinition.createObject();                    
+//                nav.push(page);
+            }                
+        }
+        
+        
+        
+        
+        topPadding: 20.0
+        layout: StackLayout {}          
+    }
+}
+

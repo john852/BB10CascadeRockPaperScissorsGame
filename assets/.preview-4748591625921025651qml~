@@ -1,0 +1,23 @@
+// Default empty project template
+import bb.cascades 1.0
+
+// creates one page with a label
+Page {
+    
+    id : titlePage;
+    
+    Container {
+        id : container;
+        background: back.imagePaint
+        attachedObjects: [
+            ImagePaintDefinition {
+                id: back
+                repeatPattern: RepeatPattern.Fill
+                imageSource: "asset:///images/background/greenB2.amd"
+            }
+        ]
+        topPadding: 20.0
+        layout: StackLayout {}          
+    }
+}
+
